@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "settings": {
+    "appearance": {
+      "theme": "system"
+    },
+    "mcp": {
+      "servers": {
+        "fastapi-mcp": {
+          "command": "npx",
+          "args": ["mcp-remote", "http://localhost:8000"],
+          "id": "fastmcp-server-quickstart",
+          "name": "FastMCP-Server-Quickstart",
+          "enabled": true,
+          "autoConnect": true
+        }
+      }
+    },
+    "general": {
+      "startupConversation": "new"
+    },
+    "privacy": {
+      "shareConversations": false,
+      "shareDiagnostics": false
+    },
+    "updates": {
+      "checkAutomatically": true,
+      "installAutomatically": false
+    }
+  }
+}
