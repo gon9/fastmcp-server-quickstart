@@ -1,31 +1,33 @@
 {
-  "version": 1,
-  "settings": {
-    "appearance": {
-      "theme": "system"
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/gon9a/Desktop",
+        "/Users/gon9a/Downloads"
+      ]
     },
-    "mcp": {
-      "servers": {
-        "fastapi-mcp": {
-          "command": "npx",
-          "args": ["mcp-remote", "http://localhost:8000"],
-          "id": "fastmcp-server-quickstart",
-          "name": "FastMCP-Server-Quickstart",
-          "enabled": true,
-          "autoConnect": true
-        }
-      }
+    "fastapi-mcp": {
+        "command": "/Users/gon9a/.local/bin/uv",
+        "args": [
+          "--directory",
+          "/Users/gon9a/workspace/ncp/fastmcp-server-quickstart",
+          "run",
+          "mcp_native_server.py"
+        ],
+        "id": "fastmcp-stdio",
+        "enabled": true,
+        "autoConnect": true
     },
-    "general": {
-      "startupConversation": "new"
-    },
-    "privacy": {
-      "shareConversations": false,
-      "shareDiagnostics": false
-    },
-    "updates": {
-      "checkAutomatically": true,
-      "installAutomatically": false
+    "fastapi-mcp-sse": {
+      "command": "npx",
+      "args": ["mcp-remote", "http://localhost:8000"],
+      "id": "fastmcp-server-quickstart",
+      "name": "FastMCP-Server-Quickstart",
+      "enabled": true,
+      "autoConnect": true
     }
   }
 }
